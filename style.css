@@ -83,7 +83,7 @@ dt { font-weight: bold; }
   font-size: .8125rem;
   color: var(--secondary);
 }
-.model-copy a { display: inline-block; margin-top: .5rem; }
+.model-actions { display: flex; flex-wrap: wrap; gap: .25rem 1rem; margin-top: .5rem; }
 .specs > div { grid-template-columns: 8rem 1fr; }
 .specs > div + div { margin-top: .375rem; }
 
