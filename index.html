@@ -21,35 +21,40 @@
 
   <main id="main" class="shell">
     <header class="page-intro">
-      <h1>Local models in Codex</h1>
-      <p>Lit Loop brings the models on your Mac into the Codex picker. Choose a model and it loads when you send your first prompt.</p>
+      <h1>One Codex picker for models across apps</h1>
+      <p>Keep your usual GPT choice and add Apple Intelligence, downloaded MLX chat models, Ollama and Llama App. Choose the provider with the model. Its app handles the request.</p>
       <a href="#setup">How it works</a>
     </header>
 
-    <figure id="library">
-      <img src="assets/lit-loop-models.webp" width="2064" height="1484" fetchpriority="high"
-             alt="Lit Loop’s Installed Models view on macOS, with Apple Intelligence, Qwen models and a Download from Link button.">
+    <figure id="picker">
+      <img src="assets/codex-picker.webp" width="1226" height="402" fetchpriority="high"
+             alt="Codex CLI’s model selector lists Qwen MLX models from Lit Loop, Ollama models, and a selected Qwen GGUF from Llama App.">
       <figcaption>
-        <span>Installed models in Lit Loop for macOS</span>
-        <a href="assets/lit-loop-models.webp">Full-size screenshot</a>
+        <span>Codex CLI model picker on macOS, showing part of the shared catalog</span>
+        <a href="assets/codex-picker.webp">Full-size screenshot</a>
       </figcaption>
     </figure>
 
     <section class="section" id="setup" aria-labelledby="setup-title">
       <h2 id="setup-title">How it works</h2>
       <ol class="steps">
-        <li><h3>Choose your models</h3><p>Use Apple Intelligence or open Discover to download a supported MLX chat model. You can also paste a compatible Hugging Face model link.</p></li>
-        <li><h3>Connect to Codex</h3><p>In Lit Loop, open Apps and connect ChatGPT. After the restart, your available local models appear in the Codex picker.</p></li>
-        <li><h3>Send a prompt</h3><p>Pick a local model and start chatting. Lit Loop loads it on demand. Set an idle timeout to free MLX memory between sessions.</p></li>
+        <li><h3>Connect Lit Loop</h3><p>Open Apps, connect ChatGPT and confirm the restart when your work is saved. Use Connection help beside the control for offline recovery instructions.</p></li>
+        <li><h3>Enable the companions you use</h3><p>Open Ollama or Llama App, then enable the corresponding switch in Lit Loop. Keep the companion running. Ollama uses the models selected in its ChatGPT settings.</p></li>
+        <li><h3>Choose a model in Codex</h3><p>Start a new chat and select a model. Sending a prompt loads the requested local weights on demand. Each companion controls how long its models stay loaded. To restore the previous Codex setup, disconnect in Lit Loop and restart ChatGPT.</p></li>
       </ol>
+    </section>
+
+    <section class="section" aria-labelledby="ollama-title">
+      <h2 id="ollama-title">Already using Ollama?</h2>
+      <p class="section-note">If you want GPT and Ollama models in Codex, Ollama’s own ChatGPT integration covers that setup. Lit Loop adds MLX chat models, Apple Intelligence and GGUF models from Llama App to the same picker. Ollama still handles its own requests, including remote inference if you choose an Ollama cloud model.</p>
     </section>
 
     <section class="section compatibility" id="compatibility" aria-labelledby="compatibility-title">
       <h2 id="compatibility-title">Compatibility</h2>
       <dl>
-        <div><dt>Apple Intelligence</dt><dd>Requires a supported Mac with macOS 26 or later and Apple Intelligence enabled in System Settings.</dd></div>
-        <div><dt>Apple MLX</dt><dd>Download and run supported MLX text and vision models on Apple silicon with macOS 27 or later.</dd></div>
-        <div><dt>Ollama &amp; llama.cpp</dt><dd>When a companion app is running, use its switch in Lit Loop to include its compatible models in the shared Codex picker.</dd></div>
+        <div><dt>Apple Intelligence</dt><dd>Requires an Apple Intelligence–capable Mac with macOS 26 or later and Apple Intelligence enabled. Short prompts worked in a minimal Codex setup. A full tool inventory exceeded the system model’s context window in our default-profile test.</dd></div>
+        <div><dt>Apple MLX</dt><dd>Run supported MLX chat models on Apple silicon with macOS 27 or later. See <a href="recommended-models.html">tested models and memory guidance</a>.</dd></div>
+        <div><dt>Ollama &amp; llama.cpp</dt><dd>Ollama serves its selected models. Llama App serves its installed GGUF chat models. On our M1 Max test Mac, the Qwen 0.5B GGUF answered a default-profile greeting. Ollama’s qwen3 loaded, but the profile exceeded its 16K context. A smaller Ollama model answered with a minimal profile.</dd></div>
       </dl>
     </section>
   </main>
