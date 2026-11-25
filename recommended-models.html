@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Choose an Apple MLX chat model for the Codex picker. Compare pinned 4-bit models, example Macs and unified-memory estimates.">
+  <title>Recommended Models — Lit Loop</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="shell masthead">
+    <a class="wordmark" href="./" aria-label="Lit Loop home">Lit Loop</a>
+    <nav aria-label="Navigation"><a href="./">Overview</a><a href="recommended-models.html" aria-current="page">Recommended models</a></nav>
+  </header>
+  <main id="main" class="shell guide">
+    <header class="guide-intro">
+      <h1>Recommended<br><em>models.</em></h1>
+      <p>Three Apple MLX models for the Codex picker. Choose one in Lit Loop’s Discover tab and send a prompt to load it on demand.</p>
+    </header>
+    <section class="section" aria-labelledby="picker-title">
+      <h2 id="picker-title">For the Codex picker</h2>
+      <p class="section-note">Each recommendation uses the pinned MLX Instruct conversion with 4-bit weights in groups of 64. Plan for one active text model on Apple silicon with macOS 27 or later.</p>
+      <article class="model-row">
+        <div class="model-copy">
+          <span class="recommendation">Recommended</span>
+          <h3>Qwen2.5 0.5B Instruct <span class="quant">4-bit</span></h3>
+          <p>A small, fast model for rephrasing a sentence or drafting a short checklist.</p>
+          <a href="https://huggingface.co/mlx-community/Qwen2.5-0.5B-Instruct-4bit/blob/a5339a4131f135d0fdc6a5c8b5bbed2753bbe0f3/README.md">Model card <span aria-hidden="true">↗</span></a>
+        </div>
+        <dl class="specs">
+          <div><dt>Example Mac</dt><dd>MacBook Air · M2</dd></div>
+          <div><dt>Unified memory</dt><dd><strong>16 GB</strong> recommended</dd></div>
+          <div><dt>Workload</dt><dd>One short text task at a time</dd></div>
+          <div><dt>Model + runtime</dt><dd>2 GiB estimated at 8K</dd></div>
+        </dl>
+      </article>
+      <article class="model-row">
+        <div class="model-copy">
+          <span class="recommendation">Recommended</span>
+          <h3>Qwen2.5 1.5B Instruct <span class="quant">4-bit</span></h3>
+          <p>Use it to turn notes into prose or answer a focused question about a paragraph.</p>
+          <a href="https://huggingface.co/mlx-community/Qwen2.5-1.5B-Instruct-4bit/blob/8b403126fc14f14cfc99bb4cfa72ecbc129ea677/README.md">Model card <span aria-hidden="true">↗</span></a>
+        </div>
+        <dl class="specs">
+          <div><dt>Example Mac</dt><dd>Mac mini · M4</dd></div>
+          <div><dt>Unified memory</dt><dd><strong>16 GB</strong> recommended</dd></div>
+          <div><dt>Workload</dt><dd>Chat and writing with a small tool set</dd></div>
+          <div><dt>Model + runtime</dt><dd>3 GiB estimated at 8K</dd></div>
+        </dl>
+      </article>
+      <article class="model-row">
+        <div class="model-copy">
+          <span class="recommendation">Recommended</span>
+          <h3>Qwen2.5 Coder 1.5B Instruct <span class="quant">4-bit</span></h3>
+          <p>Use it to explain a function or draft a small edit that you can review and test.</p>
+          <a href="https://huggingface.co/mlx-community/Qwen2.5-Coder-1.5B-Instruct-4bit/blob/b3252a2f97102b1fb1571fec2c9b27219a8536be/README.md">Model card <span aria-hidden="true">↗</span></a>
+        </div>
+        <dl class="specs">
+          <div><dt>Example Mac</dt><dd>Mac mini · M4</dd></div>
+          <div><dt>Unified memory</dt><dd><strong>24 GB</strong> recommended</dd></div>
+          <div><dt>Workload</dt><dd>A code excerpt, an open IDE and local tests</dd></div>
+          <div><dt>Model + runtime</dt><dd>3 GiB estimated at 8K</dd></div>
+        </dl>
+      </article>
+    </section>
+    <section class="section guide-section" aria-labelledby="memory-title">
+      <h2 id="memory-title">How much memory?</h2>
+      <div class="guide-prose">
+        <p>The estimates assume one request with up to 8,192 tokens shared by instructions, tool definitions, history, input and reply. Lit Loop’s model budget includes weights, the attention cache and runtime working memory. The Mac configurations leave room for macOS, Codex and its tools. The 24 GB coding example adds room for an IDE and test processes.</p>
+        <p><strong>Tested hardware.</strong> All three pinned models generated text through Lit Loop’s Codex picker route on a MacBook Pro with M1 Max and 32 GB of unified memory. The tests used short text prompts. The 8K budgets and suggested Mac configurations are planning estimates. Peak memory at 8K was not measured.</p>
+        <p>Apple lists these memory configurations for the <a href="https://support.apple.com/en-us/111867">M2 MacBook Air</a> and the <a href="https://support.apple.com/en-us/121555">M4 Mac mini</a>.</p>
+      </div>
+    </section>
+    <section class="section guide-section" aria-labelledby="external-title">
+      <h2 id="external-title">External Python runtimes</h2>
+      <div class="guide-prose">
+        <p>These specialist models run from their local folders in Python. In the Lit Loop preview, open an installed model’s three-dot menu or information window and choose <strong>Build a Python example…</strong> for its package versions and code.</p>
+        <dl class="specialists">
+          <div><dt><a href="https://huggingface.co/mlx-community/clef-flash-4bit/blob/b5adbe2c3a95200d4bf04a0727c8ec457157d5e1/README.md">Clef Flash · 4-bit</a></dt><dd>Score a fixed set of choices with the bundled Python loader and decision head.</dd></div>
+          <div><dt><a href="https://huggingface.co/mlx-community/embeddinggemma-2-bf16/blob/1a4ffddb7905d3f63486748deabe091a01fb6201/README.md">EmbeddingGemma 2 · BF16</a></dt><dd>Compare a query with a document using normalized embeddings from MLX-VLM.</dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+  <footer class="shell">
+    <span class="footer-brand">Lit Loop</span><span>Private preview for macOS</span>
+    <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+  </footer>
+</body>
+</html>
