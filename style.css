@@ -95,3 +95,17 @@ dt { font-weight: bold; }
   .compatibility dl > div { grid-template-columns: 1fr; }
   .specs > div { grid-template-columns: 7.5rem 1fr; gap: .25rem .5rem; }
 }
+
+/* Static catalog with an optional live filter. */
+.catalog-index { padding-block: 1rem; }
+#catalog-search label { display: block; font-weight: bold; margin-bottom: .35rem; }
+#catalog-search input {
+  width: min(100%, 24rem); padding: .55rem .75rem; font: inherit;
+  color: var(--ink); background: var(--paper); border: 1px solid var(--secondary); border-radius: .375rem;
+}
+#result { display: inline-block; margin: .4rem .65rem; font-size: .875rem; color: var(--secondary); }
+.catalog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); gap: .75rem; margin-top: 1rem; }
+.catalog-grid article { border: 1px solid var(--line); border-radius: .6rem; padding: 1rem; }
+.catalog-grid p { margin: .35rem 0 .7rem; color: var(--secondary); }
+.catalog-grid ul { padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: .4rem .9rem; margin: 0; }
+.catalog-end { padding-block: 1rem 2rem; }

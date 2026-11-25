@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="color-scheme" content="light dark">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse Apple MLX conversions of chat, decision and embedding models for Apple silicon.">
+  <title>Apple MLX models — Lit Loop</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="shell masthead">
+    <a class="wordmark" href="./" aria-label="Lit Loop home">Lit Loop</a>
+    <nav aria-label="Main navigation">
+      <a href="./">Overview</a>
+      <a href="recommended-models.html">Recommended models</a>
+      <a href="apple-mlx-models.html" aria-current="page">Apple MLX models</a>
+    </nav>
+  </header>
+
+
+  <main id="main" class="shell catalog">
+    <header class="page-intro">
+      <h1>Apple MLX models</h1>
+      <p>Browse MLX versions of models in the <a href="https://llama.app/models">Llama App catalog</a>. Each link opens the Hugging Face card for a specific set of weights.</p>
+      <p>For models tested in Lit Loop’s Codex picker and guidance on Mac memory, see <a href="recommended-models.html">Recommended models</a>. Other conversions may need a different MLX runtime.</p>
+    </header>
+    <div id="catalog-search" hidden>
+      <label for="filter">Find a model</label>
+      <input id="filter" type="search" placeholder="Name, size or format">
+      <span id="result" role="status"></span>
+    </div>
+    <nav class="catalog-index" aria-label="Model categories">
+      <a href="#compact">Small models</a>
+      <a href="#chat">Chat and multimodal</a>
+      <a href="#decision">Decision models</a>
+      <a href="#embedding">Embedding models</a>
+    </nav>
+    <section class="section catalog-section" id="compact" aria-labelledby="compact-title">
+      <h2 id="compact-title">Small models</h2>
+      <div class="catalog-grid">
+        <article>
+          <h3>LFM 3</h3>
+          <p>1.7B · A small text model for conversational agents.</p>
+          <ul>
+            <li><a href="https://huggingface.co/LiquidAI/LFM3-1.7B-MLX-4bit" aria-label="LFM 3 4-bit on Hugging Face">4-bit</a></li>
+          </ul>
+        </article>
+        <article>
+          <h3>LFM 3 Omni</h3>
+          <p>2B · One Liquid AI checkpoint for language, images and audio.</p>
+          <ul>
+            <li><a href="https://huggingface.co/LiquidAI/LFM3-Omni-2B-MLX-4bit" aria-label="LFM 3 Omni 4-bit on Hugging Face">4-bit</a></li>
+          </ul>
+        </article>
+        <article>
+          <h3>Qwen 3.5 Small</h3>
+          <p>0.8B · The smallest Qwen checkpoint in this selection.</p>
+          <ul>
+            <li><a href="https://huggingface.co/mlx-community/Qwen3.5-0.8B-4bit" aria-label="Qwen 3.5 Small 4-bit on Hugging Face">4-bit</a></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+    <section class="section catalog-section" id="chat" aria-labelledby="chat-title">
+      <h2 id="chat-title">Chat and multimodal</h2>
+      <div class="catalog-grid">
+        <article>
+          <h3>Inkling 2 Mini</h3>
+          <p>26B-A3B · A multimodal reasoning model from Thinking Machines Lab.</p>
+          <ul>
+            <li><a href="https://huggingface.co/mlx-community/Inkling-2-Mini-4bit" aria-label="Inkling 2 Mini 4-bit on Hugging Face">4-bit</a></li>
+          </ul>
+        </article>
+        <article>
+          <h3>LFM 2.5</h3>
+          <p>24B-A2B · Liquid AI’s mixture-of-experts model for reasoning and tool calls.</p>
+          <ul>
+            <li><a href="https://huggingface.co/LiquidAI/LFM2.5-24B-A2B-MLX-4bit" aria-label="LFM 2.5 4-bit on Hugging Face">4-bit</a></li>
+          </ul>
+        </article>
+        <article>
+          <h3>Qwen 3.8</h3>
+          <p>27B · A Qwen model for multimodal coding and research tasks.</p>
+          <ul>
+            <li><a href="https://huggingface.co/mlx-community/Qwen3.8-27B-4bit" aria-label="Qwen 3.8 4-bit on Hugging Face">4-bit</a></li>
+          </ul>
+        </article>
+        <article>
+          <h3>GLM 5.3 Flash</h3>
+          <p>320B-A18B · A large vision-capable coding model from Z.ai.</p>
+          <ul>
+            <li><a href="https://huggingface.co/Jundot/GLM-5.3-Flash-oQ4e-mtp" aria-label="GLM 5.3 Flash oQ4e MTP on Hugging Face">oQ4e MTP</a></li>
+          </ul>
+        </article>
+        <article>
+          <h3>Qwen 3.8 Flash Next</h3>
+          <p>125B-A6B · A preview checkpoint for long conversations and agent tasks.</p>
+          <ul>
+            <li><a href="https://huggingface.co/mlx-community/Qwen3.8-Flash-Next-4bit" aria-label="Qwen 3.8 Flash Next 4-bit on Hugging Face">4-bit</a></li>
+          </ul>
+        </article>
+        <article>
+          <h3>Muse Glimmer</h3>
+          <p>30B · Meta’s model for assistants that work with code and images.</p>
+          <ul>
+            <li><a href="https://huggingface.co/mlx-community/Muse-Glimmer-30B-4bit" aria-label="Muse Glimmer 4-bit on Hugging Face">4-bit</a></li>
+          </ul>
+        </article>
+        <article>
+          <h3>Gemma 4</h3>
+          <p>Google’s instruction-tuned multimodal family. Pick a size below.</p>
+          <ul>
+            <li><a href="https://huggingface.co/mlx-community/gemma-4-e2b-it-4bit" aria-label="Gemma 4 E2B · 4-bit on Hugging Face">E2B · 4-bit</a></li>
+            <li><a href="https://huggingface.co/mlx-community/gemma-4-e4b-it-4bit" aria-label="Gemma 4 E4B · 4-bit on Hugging Face">E4B · 4-bit</a></li>
+            <li><a href="https://huggingface.co/lmstudio-community/gemma-4-12B-it-MLX-4bit" aria-label="Gemma 4 12B · 4-bit on Hugging Face">12B · 4-bit</a></li>
+            <li><a href="https://huggingface.co/mlx-community/gemma-4-26b-a4b-it-4bit" aria-label="Gemma 4 26B-A4B · 4-bit on Hugging Face">26B-A4B · 4-bit</a></li>
+            <li><a href="https://huggingface.co/mlx-community/gemma-4-31b-it-4bit" aria-label="Gemma 4 31B · 4-bit on Hugging Face">31B · 4-bit</a></li>
+          </ul>
+        </article>
+        <article>
+          <h3>Nemotron 3.5 Super VL</h3>
+          <p>120B-A12B · NVIDIA’s vision-language model for reasoning over documents.</p>
+          <ul>
+            <li><a href="https://huggingface.co/Duckets/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-MLX-4bit" aria-label="Nemotron 3.5 Super VL 4-bit on Hugging Face">4-bit</a></li>
+          </ul>
+        </article>
+        <article>
+          <h3>Muse Spark Open</h3>
+          <p>816B-A42B · Meta’s large multimodal mixture-of-experts model.</p>
+          <ul>
+            <li><a href="https://huggingface.co/mlx-community/Muse-Spark-Open-816B-A42B-4bit" aria-label="Muse Spark Open 4-bit on Hugging Face">4-bit</a></li>
+          </ul>
+        </article>
+        <article>
+          <h3>Flint</h3>
+          <p>40B-A2.5B · A coding model for investigating and editing projects.</p>
+          <ul>
+            <li><a href="https://huggingface.co/mlx-community/flint-mixed-3-4bit" aria-label="Flint Mixed 3/4-bit on Hugging Face">Mixed 3/4-bit</a></li>
+          </ul>
+        </article>
+        <article>
+          <h3>Nemotron 3.5 Lightning</h3>
+          <p>30B-A3B · A hybrid NVIDIA model for reasoning across long inputs.</p>
+          <ul>
+            <li><a href="https://huggingface.co/mlx-community/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-4bit" aria-label="Nemotron 3.5 Lightning 4-bit on Hugging Face">4-bit</a></li>
+          </ul>
+        </article>
+        <article>
+          <h3>Laguna XS 2.1</h3>
+          <p>33B-A3B · The smaller of Poolside’s two Laguna coding models.</p>
+          <ul>
+            <li><a href="https://huggingface.co/mlx-community/Laguna-XS-2.1-4bit" aria-label="Laguna XS 2.1 4-bit on Hugging Face">4-bit</a></li>
+          </ul>
+        </article>
+        <article>
+          <h3>Laguna S 2.1</h3>
+          <p>118B-A8B · Poolside’s larger model for multi-step software work.</p>
+          <ul>
+            <li><a href="https://huggingface.co/TensorFold/Laguna-S-2.1-MLX-4bit" aria-label="Laguna S 2.1 4-bit on Hugging Face">4-bit</a></li>
+          </ul>
+        </article>
+        <article>
+          <h3>DeepSeek V4 Flash</h3>
+          <p>304B · The 0731 checkpoint of DeepSeek’s sparse reasoning model.</p>
+          <ul>
+            <li><a href="https://huggingface.co/TensorFold/DeepSeek-V4-Flash-0731-MXFP4-MLX" aria-label="DeepSeek V4 Flash MXFP4 on Hugging Face">MXFP4</a></li>
+          </ul>
+        </article>
+        <article>
+          <h3>Qwen 3.6</h3>
+          <p>Two Qwen architectures for work with code, images and text.</p>
+          <ul>
+            <li><a href="https://huggingface.co/mlx-community/Qwen3.6-27B-4bit" aria-label="Qwen 3.6 27B · 4-bit on Hugging Face">27B · 4-bit</a></li>
+            <li><a href="https://huggingface.co/mlx-community/Qwen3.6-35B-A3B-4bit" aria-label="Qwen 3.6 35B-A3B · 4-bit on Hugging Face">35B-A3B · 4-bit</a></li>
+          </ul>
+        </article>
+        <article>
+          <h3>GLM 4.7 Flash</h3>
+          <p>30B-A3B · A Z.ai model for coding and multi-turn tool use.</p>
+          <ul>
+            <li><a href="https://huggingface.co/mlx-community/GLM-4.7-Flash-4bit" aria-label="GLM 4.7 Flash 4-bit on Hugging Face">4-bit</a></li>
+          </ul>
+        </article>
+        <article>
+          <h3>Devstral 2</h3>
+          <p>Mistral’s December 2025 instruction-tuned models for software engineering.</p>
+          <ul>
+            <li><a href="https://huggingface.co/mlx-community/Devstral-Small-2-24B-Instruct-2512-4bit" aria-label="Devstral 2 Small 24B · 4-bit on Hugging Face">Small 24B · 4-bit</a></li>
+            <li><a href="https://huggingface.co/mlx-community/Devstral-2-123B-Instruct-2512-4bit" aria-label="Devstral 2 123B · 4-bit on Hugging Face">123B · 4-bit</a></li>
+          </ul>
+        </article>
+        <article>
+          <h3>Ministral 3</h3>
+          <p>Compact instruction-tuned models from Mistral’s 2512 series.</p>
+          <ul>
+            <li><a href="https://huggingface.co/mlx-community/Ministral-3-3B-Instruct-2512-4bit" aria-label="Ministral 3 3B · 4-bit on Hugging Face">3B · 4-bit</a></li>
+            <li><a href="https://huggingface.co/mlx-community/Ministral-3-8B-Instruct-2512-4bit" aria-label="Ministral 3 8B · 4-bit on Hugging Face">8B · 4-bit</a></li>
+            <li><a href="https://huggingface.co/mlx-community/Ministral-3-14B-Instruct-2512-4bit" aria-label="Ministral 3 14B · 4-bit on Hugging Face">14B · 4-bit</a></li>
+          </ul>
+        </article>
+        <article>
+          <h3>Ministral 3 Reasoning</h3>
+          <p>Reasoning-tuned variants of the December 2025 Ministral family.</p>
+          <ul>
+            <li><a href="https://huggingface.co/mlx-community/Ministral-3-3B-Reasoning-2512-4bit" aria-label="Ministral 3 Reasoning 3B · 4-bit on Hugging Face">3B · 4-bit</a></li>
+            <li><a href="https://huggingface.co/mlx-community/Ministral-3-8B-Reasoning-2512-4bit" aria-label="Ministral 3 Reasoning 8B · 4-bit on Hugging Face">8B · 4-bit</a></li>
+            <li><a href="https://huggingface.co/mlx-community/Ministral-3-14B-Reasoning-2512-4bit" aria-label="Ministral 3 Reasoning 14B · 4-bit on Hugging Face">14B · 4-bit</a></li>
+          </ul>
+        </article>
+        <article>
+          <h3>GPT-OSS</h3>
+          <p>Two OpenAI reasoning checkpoints with native low-precision expert weights.</p>
+          <ul>
+            <li><a href="https://huggingface.co/mlx-community/gpt-oss-20b-MXFP4-Q8" aria-label="GPT-OSS 20B · MXFP4 / Q8 on Hugging Face">20B · MXFP4 / Q8</a></li>
+            <li><a href="https://huggingface.co/mlx-community/gpt-oss-120b-MXFP4-Q8" aria-label="GPT-OSS 120B · MXFP4 / Q8 on Hugging Face">120B · MXFP4 / Q8</a></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+    <section class="section catalog-section" id="decision" aria-labelledby="decision-title">
+      <h2 id="decision-title">Decision models</h2>
+      <p class="section-note">Use these weights with the external runtime on the model card.</p>
+      <div class="catalog-grid">
+        <article>
+          <h3>d1 Omni</h3>
+          <p>2B · Scores choices using mixed-media inputs.</p>
+          <ul>
+            <li><a href="https://huggingface.co/LiquidAI/d1-Omni-2B-MLX-8bit" aria-label="d1 Omni 8-bit on Hugging Face">8-bit</a></li>
+          </ul>
+        </article>
+        <article>
+          <h3>d3 Flash</h3>
+          <p>9B · Scores candidate answers for multimodal classification.</p>
+          <ul>
+            <li><a href="https://huggingface.co/sergolsub/d3-flash-9B-MLX-8bit" aria-label="d3 Flash 8-bit on Hugging Face">8-bit</a></li>
+          </ul>
+        </article>
+        <article>
+          <h3>Kev</h3>
+          <p>Structured classification with a probability for each candidate.</p>
+          <ul>
+            <li><a href="https://huggingface.co/AbstractFramework/kev-0.8b-mlx-4bit" aria-label="Kev 0.8B · 4-bit on Hugging Face">0.8B · 4-bit</a></li>
+            <li><a href="https://huggingface.co/RoderickQiu/kev-4b-mlx-8bit" aria-label="Kev 4B · 8-bit on Hugging Face">4B · 8-bit</a></li>
+            <li>9B · MLX conversion unconfirmed</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Clef Flash</h3>
+          <p>9B · Scores choices against text or images. Lit Loop includes a local Python example.</p>
+          <ul>
+            <li><a href="https://huggingface.co/mlx-community/clef-flash-4bit" aria-label="Clef Flash 4-bit on Hugging Face">4-bit</a></li>
+          </ul>
+        </article>
+        <article>
+          <h3>Laya</h3>
+          <p>421M · A compact multilingual decision model for documents.</p>
+          <ul>
+            <li><a href="https://huggingface.co/cavi-ai/laya-MLX-8bit" aria-label="Laya 8-bit on Hugging Face">8-bit</a></li>
+          </ul>
+        </article>
+        <article>
+          <h3>Bespoke Nimble</h3>
+          <p>9B · The v3 checkpoint from Bespoke Labs.</p>
+          <ul>
+            <li>v3 · MLX conversion unconfirmed</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+    <section class="section catalog-section" id="embedding" aria-labelledby="embedding-title">
+      <h2 id="embedding-title">Embedding models</h2>
+      <p class="section-note">Use these weights with the external runtime on the model card.</p>
+      <div class="catalog-grid">
+        <article>
+          <h3>EmbeddingGemma 2</h3>
+          <p>740M · Produces vectors for retrieval and similarity scoring. Lit Loop includes a local Python example.</p>
+          <ul>
+            <li><a href="https://huggingface.co/mlx-community/embeddinggemma-2-bf16" aria-label="EmbeddingGemma 2 BF16 on Hugging Face">BF16</a></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+    <p class="catalog-end">Checked 25 November 2026 against public model cards, configurations and weight manifests. <a href="https://huggingface.co/models?library=mlx">Browse more MLX models on Hugging Face</a>.</p>
+  </main>
+  <footer class="shell">
+    <span class="footer-brand">Lit Loop</span>
+    <span>Private preview for macOS</span>
+    <a href="#top">Back to top</a>
+  </footer>
+  <script src="catalog.js"></script>
+</body>
+</html>
