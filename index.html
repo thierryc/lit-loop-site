@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="color-scheme" content="light dark">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#fafafa">
   <meta name="description" content="Lit Loop is a macOS menu bar app that brings local models into the Codex picker and loads them on demand.">
   <title>Lit Loop — Local models in Codex</title>
   <link rel="icon" href="data:,">
@@ -12,35 +12,30 @@
 <body id="top">
   <a class="skip" href="#main">Skip to content</a>
   <header class="shell masthead">
-    <a class="wordmark" href="#top" aria-label="Lit Loop home">Lit Loop</a>
-    <nav aria-label="Navigation">
+    <a class="wordmark" href="./" aria-label="Lit Loop home">Lit Loop</a>
+    <nav aria-label="Main navigation">
+      <a href="./" aria-current="page">Overview</a>
       <a href="recommended-models.html">Recommended models</a>
-      <a href="#library">Model library</a>
-      <a href="#compatibility">Compatibility</a>
     </nav>
   </header>
 
   <main id="main" class="shell">
-    <section class="hero" aria-labelledby="headline">
-      <h1 id="headline">Local models,<br><em>in Codex.</em></h1>
-      <div class="introduction">
-        <p>Lit Loop brings the models on your Mac into the Codex picker. Choose a model and it loads when you send your first prompt.</p>
-        <a class="button" href="#setup">How it works <span aria-hidden="true">↓</span></a>
-      </div>
-    </section>
+    <header class="page-intro">
+      <h1>Local models in Codex</h1>
+      <p>Lit Loop brings the models on your Mac into the Codex picker. Choose a model and it loads when you send your first prompt.</p>
+      <a href="#setup">How it works</a>
+    </header>
 
     <figure id="library">
-      <div class="stage">
-        <img src="assets/lit-loop-models.webp" width="2064" height="1484" fetchpriority="high"
+      <img src="assets/lit-loop-models.webp" width="2064" height="1484" fetchpriority="high"
              alt="Lit Loop’s Installed Models view on macOS, with Apple Intelligence, Qwen models and a Download from Link button.">
-      </div>
       <figcaption>
-        <span>Lit Loop for macOS <span class="caption-divider" aria-hidden="true">/</span> Installed models</span>
-        <a href="assets/lit-loop-models.webp">Full-size screenshot <span aria-hidden="true">↗</span></a>
+        <span>Installed models in Lit Loop for macOS</span>
+        <a href="assets/lit-loop-models.webp">Full-size screenshot</a>
       </figcaption>
     </figure>
 
-    <section class="section setup" id="setup" aria-labelledby="setup-title">
+    <section class="section" id="setup" aria-labelledby="setup-title">
       <h2 id="setup-title">How it works</h2>
       <ol class="steps">
         <li><h3>Choose your models</h3><p>Use Apple Intelligence or open Discover to download a supported MLX chat model. You can also paste a compatible Hugging Face model link.</p></li>
@@ -62,7 +57,7 @@
   <footer class="shell">
     <span class="footer-brand">Lit Loop</span>
     <span>Private preview for macOS</span>
-    <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+    <a href="#top">Back to top</a>
   </footer>
 </body>
 </html>
