@@ -58,6 +58,16 @@
         <div><dt>Ollama &amp; llama.cpp</dt><dd>Ollama serves its selected models. Llama App serves its installed GGUF chat models. On our M1 Max test Mac, the Qwen 0.5B GGUF answered a default-profile greeting. Ollama’s qwen3 loaded, but the profile exceeded its 16K context. A smaller Ollama model answered with a minimal profile.</dd></div>
       </dl>
     </section>
+    <section class="section" id="codex-benchmark" aria-labelledby="benchmark-title">
+      <h2 id="benchmark-title">Benchmark your models in Codex</h2>
+      <ol class="steps">
+        <li><strong>Choose a model and profile.</strong> Start with your usual Codex setup. For a comparison with fewer tools, repeat the same prompts with a separate profile that has optional plugins and MCP servers disabled.</li>
+        <li><strong>Use the same prompts.</strong> Send each prompt in a fresh chat. Try “Reply with exactly READY,” “What is 37 plus 58? Reply with only the integer,” and “In Python, what does <code>[n * 2 for n in range(3)]</code> evaluate to? Reply only with the resulting list.” Repeat each prompt three times if you can.</li>
+        <li><strong>Record the results.</strong> Time each turn from Send to the first visible reply text and to the end of the reply. Check whether the answer matches the prompt. Count context errors and timeouts, and record the first run separately if the model had to load.</li>
+      </ol>
+      <p class="section-note">Include your Mac chip, unified memory, macOS version, Lit Loop build, Codex version, exact model and quantization, runtime, context size, and which profile you used. Share the timings and any errors in a public issue. Omit personal prompts, credentials, and local file paths.</p>
+      <p class="section-note"><a href="https://github.com/thierryc/lit-loop-site/issues/new?title=Codex%20benchmark">Submit your benchmark as a GitHub issue</a></p>
+    </section>
   </main>
 
   <footer class="shell">
